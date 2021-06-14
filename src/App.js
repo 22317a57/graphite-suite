@@ -57,7 +57,7 @@ class App extends Component {
         <ToastsContainer store={ToastsStore}/>
          <BrowserRouter>
            <div className="main-container">
-             <Route exact path='/' component={Documents} />
+             <Route exact path='/' component={SingleDoc} />
              <Route exact path='/documents' component={Documents} />
              <Route exact path="/documents/:id" component={SingleDoc} />
              <Route exact path="/documents/team/:id/:id" component={SingleDoc} />

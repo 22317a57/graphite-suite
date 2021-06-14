@@ -28,7 +28,22 @@ const setAxiosHeaders = () => {
 }
 
 setGlobal({
-    userSession,
+    userSession: {
+      ...userSession,
+      isUserSignedIn: function() {
+        return true
+      },
+      loadUserData: function() {
+        return{
+          username: 'alexare'
+        }
+      },
+      getFile: async function(){
+        return {
+          place: null
+        }
+      }
+    },
     organization: {},
     documents: [],
     contacts: [],
